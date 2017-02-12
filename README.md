@@ -77,17 +77,19 @@ The code for the transformation is located in lines 33 to 39 of the `Pipeline.pr
 This resulted in the following source and destination points: 
 | Source        | Destination   | 
 |:-------------:|:-------------:| 
-| 240, 720      | 360, 720        | 
-| 580, 450      | 240, 0      |
-| 720, 450     | 1200, 0      |
-| 1200, 720      | 1080, 720       |
+| 240, 720      | 360, 720      | 
+| 580, 450      | 240, 0        |
+| 720, 450      | 1200, 0       |
+| 1200, 720     | 1080, 720     |
 
 As you can see below, after the perspective transform we obtain a result such that both lines are parallel and not converging to a horizon.
 
 Original Image
+
 ![Original image][image2]
 
 Image after perspective transform
+
 ![Image after perspective transform][image3]
 
 ####3. Color transforms to reveal the lines
@@ -102,14 +104,23 @@ The following combination of color and gradient thresholds were used to isolate 
 The effects of the various transforms are shown below together with their combined effect is shown below
 
 Sobel Magnitude Theshold on L Channel in HLS
+
 ![alt text][image4]
+
 Sobel Magnitude Theshold on S Channel in HLS
+
 ![alt text][image5]
+
 White Masking
+
 ![alt text][image6]
+
 Yellow Masking
+
 ![alt text][image7]
+
 Combined Thresholding and Masking
+
 ![alt text][image8]
 
 ####4. Identifying the lines with good confidence
