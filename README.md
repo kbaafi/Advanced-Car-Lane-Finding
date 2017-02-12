@@ -75,12 +75,13 @@ The code for the transformation is located in lines 33 to 39 of the `Pipeline.pr
 
 ```
 This resulted in the following source and destination points: 
-| Source        | Destination   | 
-|:-------------:|:-------------:| 
-| 240, 720      | 360, 720      | 
-| 580, 450      | 240, 0        |
-| 720, 450      | 1200, 0       |
-| 1200, 720     | 1080, 720     |
+
+| Source   | Destination |
+|----------|-------------|
+| 240,720  | 360,720     |
+| 580,450  | 240,0       |
+| 720,450  | 1200,0      |
+| 1200,720 | 1080,720    |
 
 As you can see below, after the perspective transform we obtain a result such that both lines are parallel and not converging to a horizon.
 
