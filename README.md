@@ -95,12 +95,13 @@ Image after perspective transform
 
 ####3. Color transforms to reveal the lines
 The following combination of color and gradient thresholds were used to isolate the lines. The functions that perform these tasks are in the file `image_thresholding.py`  and are called in lines 43 to 58 of `Pipeline.py`
-| Method        | Threshold or Range   | 
-|:-------------:|:-------------:| 
-| Magnitude of Sobel in x and y directions performed on L channel of HLS      | 50 - 200     | 
-| Magnitude of Sobel in x and y directions performed on S channel of HLS       | 50 - 200       |
-| Range masking of HSV     | between  [0, 100, 100] and  [50,255,255]    |
-| Range masking of HSV    | between [20, 0, 180] and [255,80,255]     |
+
+| Method                                                                 | Threshold or Range                     |
+|------------------------------------------------------------------------|----------------------------------------|
+| Magnitude of Sobel in x and y directions performed on L channel of HLS | 50 - 200                               |
+| Magnitude of Sobel in x and y directions performed on S channel of HLS | 50 - 200                               |
+| Range masking of HSV                                                   | between [0, 100, 100] and,[50,255,255] |
+| Range masking of HSV                                                   | between [20, 0, 180] and [255,80,255]  |
 
 The effects of the various transforms are shown below together with their combined effect is shown below
 
