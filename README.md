@@ -51,6 +51,7 @@ The function `cv2.calibrateCamera` returns among others the distortion coefficie
 The result of undistorting a captured image is shown here
 
 ![Distorted image][image1]
+
 ![Undistorted image][image2]
 
 ###Pipeline (single images)
@@ -62,6 +63,7 @@ The steps performed by the pipeline are as follows:
 
 ####1. Distortion Correction
 An example undistorted image is shown below.:
+
 ![alt text][image2]
 
 ####2. Perspective Transformation
@@ -120,6 +122,7 @@ When the pixel coordinates `(x and y)` of the lanes are found, we then fit a 2nd
 Searching by using the histogram is done at the beginning of the video. If we are able to fit a line, in the next frame we look for line pixels in the vicinity of a margin of the fitted line from the current frame. The function that performs this task is called `detect_lanes_without_histogram`
 
 Using the histogram to locate the peaks of pixel densities
+
 ![alt text][image10]
 
 ##### Line search heuristics
@@ -142,6 +145,7 @@ The following heuristics were used: see lines 61 to 78 in `Pipeline.py` and the 
 	After 3 failures of finding any line, use the histogram method, but search within an outer margin of the previously obtained lines (see detect_lanes_with_histogram_and_bounds in lane_detection)
 `
 Polynomial Fitting example
+
 ![alt text][image11]
 
 ####5. Radius of the curvature and the distance from center.
